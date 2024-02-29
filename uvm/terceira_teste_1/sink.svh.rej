@@ -1,0 +1,20 @@
+*** sink.svh	2017-04-06 11:11:31.179377647 -0300
+--- sink.svh	2017-04-06 11:15:20.044598508 -0300
+***************
+*** 12,19 ****
+  
+     task put (a_tr tr);
+        // Here, we have received the transaction from source
+!       `uvm_info("SINK                          ", "Transaction received\n", UVM_MEDIUM)
+!       `bvm_end_tr(tr)
+     endtask
+  
+  endclass
+--- 12,18 ----
+  
+     task put (a_tr tr);
+        // Here, we have received the transaction from source
+!       `uvm_info("SINK                          ", "Transaction received", UVM_MEDIUM)
+     endtask
+  
+  endclass

@@ -1,0 +1,22 @@
+*** trans.svh	2017-02-22 15:43:32.818047036 -0300
+--- trans.svh	2017-02-22 15:43:31.758047036 -0300
+***************
+*** 1,10 ****
+  class a_tr extends uvm_sequence_item;
+  
+!   int a;
+! 
+!   `uvm_object_utils_begin(a_tr)  // needed for transaction recording
+!      `uvm_field_int(a, UVM_ALL_ON | UVM_DEC)
+!   `uvm_object_utils_end
+  
+  endclass
+  
+--- 1,7 ----
+  class a_tr extends uvm_sequence_item;
++ // transaction is implemented in uvm by uvm_sequence_item class
+  
+!   int a; // a transaction element - only one to make things easy
+  
+  endclass
+  

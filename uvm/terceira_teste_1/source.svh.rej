@@ -1,0 +1,20 @@
+*** source.svh	2017-04-06 11:18:25.647395830 -0300
+--- source.svh	2017-04-06 11:15:20.041598478 -0300
+***************
+*** 14,21 ****
+        // generate 5 transactions and send it via the put_port
+        repeat (5) begin
+           tr = new();  // create transaction instance
+!          `bvm_begin_tr(tr)  // start transaction recording
+!          `uvm_info ("SOURCE", "Sending transaction", UVM_MEDIUM)
+           out.put (tr);  // send transaction to put_port
+        end
+     endtask
+--- 14,20 ----
+        // generate 5 transactions and send it via the put_port
+        repeat (5) begin
+           tr = new();  // create transaction instance
+!          `uvm_info ("SOURCE", "Sending transaction", UVM_MEDIUM)       
+           out.put (tr);  // send transaction to put_port
+        end
+     endtask

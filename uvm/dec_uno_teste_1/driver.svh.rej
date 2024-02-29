@@ -1,0 +1,34 @@
+*** driver.svh	2017-04-13 11:53:28.890744685 -0300
+--- driver_.svh	2017-04-13 11:55:20.917404155 -0300
+***************
+*** 34,50 ****
+  
+     task get_and_drive();
+        a_tr tr_sequencer; // transaction coming from sequencer
+-       a_tr tr_refmod; // transaction going to reference model  
+  
+        forever begin
+            wait (a_vi.reset === 0);
+           
+            seq_item_port.get_next_item(tr_sequencer); // get transaction
+  
+-           $cast(tr_refmod, tr_sequencer.clone()); // copy transaction
+-           `bvm_begin_tr(tr_refmod)
+-           rsp_port.write(tr_refmod); // send it to reference model
+- 
+            // wiggle interface signals
+            @(posedge a_vi.clock);
+            a_vi.valid <= 1;
+--- 34,45 ----
+  
+     task get_and_drive();
+        a_tr tr_sequencer; // transaction coming from sequencer
+  
+        forever begin
+            wait (a_vi.reset === 0);
+           
+            seq_item_port.get_next_item(tr_sequencer); // get transaction
+  
+            // wiggle interface signals
+            @(posedge a_vi.clock);
+            a_vi.valid <= 1;

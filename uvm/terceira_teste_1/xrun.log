@@ -1,0 +1,116 @@
+xrun(64): 23.03-s004: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s004: Started on Sep 30, 2023 at 13:46:37 -03
+irun
+	-access +r
+	-uvm
+	+uvm_set_config_int=*,recording_detail,1
+	+incdir+../bvm
+	../bvm/bvm_pkg.sv
+	top.sv
+	+UVM_VERBOSITY=LOW
+
+   User defined plus("+") options:
+	+uvm_set_config_int=*,recording_detail,1
+	+UVM_VERBOSITY=LOW
+
+xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+Recompiling... reason: file './source.svh' is newer than expected.
+	expected: Sat Sep 30 13:19:03 2023
+	actual:   Sat Sep 30 13:42:21 2023
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /Tools/cadence/XCELIUM2303/tools/methodology/UVM/CDNS-1.1d
+file: top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x567a21ed
+		top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x410c40da>
+			streams:   1, words:   792
+		worklib.\$unit_0x567a21ed :compilation_unit <0x32a71594>
+			streams: 171, words: 187046
+		worklib.cdns_uvm_pkg:sv <0x15d106a4>
+			streams: 172, words: 275839
+		worklib.cdns_uvmapi:svp <0x28f3d2ba>
+			streams:  27, words: 30300
+		worklib.cdns_assert2uvm_pkg:sv <0x15b84c3b>
+			streams:   3, words:  1763
+		worklib.uvm_pkg:sv <0x2b23e116>
+			streams: 4537, words: 7097948
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Verilog packages:              4       5
+		Registers:                 13228   10139
+		Named events:                  4      12
+		Initial blocks:              264     151
+		Parallel blocks:              26      27
+		Assertions:                    4       4
+		Compilation units:             1       1
+		SV Class declarations:       196     310
+		SV Class specializations:    352     352
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED default: 1
+xcelium> source /Tools/cadence/XCELIUM2303/tools/xcelium/files/xmsimrc
+xcelium> source /Tools/cadence/XCELIUM2303/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (23.03-s004)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test test...
+UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,recording_detail,1
+SDI/Verilog Transaction Recording Facility Version 23.03-s004
+UVM_INFO /Tools/cadence/XCELIUM2303/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 220: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    3
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM_CMDLINE_PROC]     1
+Simulation complete via $finish(1) at time 220 NS + 44
+/Tools/cadence/XCELIUM2303/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.03-s004: Exiting on Sep 30, 2023 at 13:46:42 -03  (total: 00:00:05)

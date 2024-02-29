@@ -1,0 +1,16 @@
+*** top.sv	2017-04-06 10:51:14.375524320 -0300
+--- top.sv	2017-04-06 11:15:20.046598527 -0300
+***************
+*** 1,6 ****
+  `include "uvm_macros.svh"
+  import uvm_pkg::*;
+- `include "bvm_macros.svh" // macros created by Brazil-IP / UFCG
+  
+  `include "trans.svh"
+  `include "source.svh"
+--- 1,5 ----
+  `include "uvm_macros.svh"
+  import uvm_pkg::*;
+  
+  `include "trans.svh"
+  `include "source.svh"

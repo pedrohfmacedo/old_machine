@@ -1,0 +1,52 @@
+xrun(64): 23.03-s004: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.03-s004: Started on Sep 23, 2023 at 18:29:24 -03
+irun
+	-uvm
+	top.sv
+	+UVM_VERBOSITY=HIGH
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=HIGH
+
+xrun: *W,NCEXDEP: Executable (irun) is deprecated. Use (xrun) instead.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /Tools/cadence/XCELIUM2303/tools/methodology/UVM/CDNS-1.1d
+file: top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		$unit_0x64683678
+		top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.top:sv <0x63340bf8>
+			streams:   3, words:  2581
+		worklib.\$unit_0x64683678 :compilation_unit <0x32c96369>
+			streams: 110, words: 115107
+		worklib.cdns_uvm_pkg:sv <0x45694648>
+			streams: 172, words: 247457
+		worklib.cdns_uvmapi:svp <0x432ba1f0>
+			streams:  27, words: 28542
+		worklib.cdns_assert2uvm_pkg:sv <0x7717d1a5>
+			streams:   3, words:  1650
+		worklib.uvm_pkg:sv <0x16599523>
+			streams: 4532, words: 6770732
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Verilog packages:              4       4
+		Registers:                 12981   10052
+		Named events:                  4      12
+		Initial blocks:              257     149
+		Parallel blocks:              26      27
+		Assertions:                    2       2
+		Compilation units:             1       1
+		SV Class declarations:       194     306
+		SV Class specializations:    347     347
